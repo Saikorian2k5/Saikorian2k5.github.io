@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@200&display=swap rel="stylesheet"');
+
+body, html {
+    height: 100%;
+    margin:0;
+    font-family: 'monospace', sans-serif;
+    line-height: 180%;
+    color: #666;
+    text-align: center;
+}
+
+.background-image{
+  background-image: url("background.png");
+  position: relative;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+}
+
+.background-image h1 {
+  font-family: "Piazzolla";
+  color: #FFFFFF;
+  background-color: #000000;
+  position: absolute; /* or absolute */
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered h2{
+  font-family: "Piazzolla";
+  color: #FFFFFF;
+  position: absolute; /* or absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  overflow: hidden;
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 5.0s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 60% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.parallax2 {
+    font-family: "Piazzolla";
+    color: #000000;
+    min-height: 60%;
+}
+.parallax3 {
+    background-image: url(img/Power.png);
+    min-height: 40%;
+}
+.parallax4 {
+    background-image: url(img/Birdy.jpg);
+    min-height: 100%;
+}
+
+.parallax1, .parallax2, .parallax3, .parallax4 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*Important*/
+}
+
+.head {
+    position: absolute;
+    color: #fff;
+    font-size: 500%;
+    top:50%;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    animation: drop 3.0s ease; /* Make things beautiful */
+    cursor: pointer;
+}
+
+.head:hover{
+    color:transparent;
+}
+
+
+section {
+    overflow: auto;
+    padding: 50px 80px;
+
+}
+
+footer{
+    width: 100%;
+    background-color: #323232;
+    color: #f2f2f2;
+    height: 8vh;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+}
+
+@media (max-width:800px) {
+    .head{
+        font-size: 200%;
+    }
+
+}
+
+
+@keyframes drop {
+    0% {
+      opacity: 0;
+      transform: translateY(-80px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
